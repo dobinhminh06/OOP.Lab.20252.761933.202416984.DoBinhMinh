@@ -14,14 +14,14 @@ public class Cart {
         }
     }
 
-    //Overloading: Su dung Array parameter
+    // Overloading: using Array parameter
     // public void addDigitalVideoDisc(DigitalVideoDisc [] dvds){
     //     for(DigitalVideoDisc disc : dvds){
     //         this.addDigitalVideoDisc(disc);
     //     }
     // }
 
-    //Overloading: Su dung Varargs
+    // Overloading: using Varargs
     public void addDigitalVideoDisc(DigitalVideoDisc... dvds){
         for(DigitalVideoDisc disc: dvds){
             this.addDigitalVideoDisc(disc);
