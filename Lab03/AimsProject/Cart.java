@@ -1,8 +1,8 @@
 package Lab03.AimsProject;
 
 public class Cart {
-    private DigitalVideoDisc[] items = new DigitalVideoDisc[20]; 
-    private int qtyOrdered = 0; 
+    private DigitalVideoDisc[] items = new DigitalVideoDisc[20];
+    private int qtyOrdered = 0;
 
     public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered < 20) {
@@ -14,18 +14,24 @@ public class Cart {
         }
     }
 
-    //Overloading: Su dung Array parameter
+    // Overloading: Su dung Array parameter
     // public void addDigitalVideoDisc(DigitalVideoDisc [] dvgdist){
-    //     for(DigitalVideoDisc disc : dvgdist){
-    //         this.addDigitalVideoDisc(disc);
-    //     }
+    // for(DigitalVideoDisc disc : dvgdist){
+    // this.addDigitalVideoDisc(disc);
+    // }
     // }
 
-    //Overloading: Su dung Varargs
-    public void addDigitalVideoDisc(DigitalVideoDisc... dvds){
-        for(DigitalVideoDisc disc: dvds){
+    // Overloading: Su dung Varargs
+    public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+        for (DigitalVideoDisc disc : dvds) {
             this.addDigitalVideoDisc(disc);
         }
+    }
+
+    // Overloading: Su dung two parameter
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        this.addDigitalVideoDisc(dvd1);
+        this.addDigitalVideoDisc(dvd2);
     }
 
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
