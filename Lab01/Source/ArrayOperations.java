@@ -18,7 +18,7 @@ public class ArrayOperations {
         int sum = 0;
         for (int num : my_array1) {
             sum += num;
-        }
+        }   
         
         double average = (double) sum / my_array1.length;
 

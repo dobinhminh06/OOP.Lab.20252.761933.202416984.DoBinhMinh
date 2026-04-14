@@ -1,4 +1,4 @@
-package Lab02.Source;
+package Lab02.AimsProject;
 
 public class Cart {
     private DigitalVideoDisc[] items = new DigitalVideoDisc[20]; 
