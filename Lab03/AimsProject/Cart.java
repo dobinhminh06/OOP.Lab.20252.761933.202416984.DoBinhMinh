@@ -13,21 +13,7 @@ public class Cart {
             System.out.println("The cart is almost full. Cannot add more DVDs.");
         }
     }
-
-    //Overloading su dung mang
-    // public void addDigitalVideoDisc(DigitalVideoDisc [] dvds){
-    //     for(DigitalVideoDisc disc: dvds){
-    //         this.addDigitalVideoDisc(disc);
-    //     }
-    // }
-
-    //Overloading su dung varargs
-    public void addDigitalVideoDisc(DigitalVideoDisc... dvds){
-        for(DigitalVideoDisc disc: dvds){
-            this.addDigitalVideoDisc(disc);
-        }
-    }
-
+    
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         for (int i = 0; i < qtyOrdered; i++) {
             if (items[i] == disc) {
