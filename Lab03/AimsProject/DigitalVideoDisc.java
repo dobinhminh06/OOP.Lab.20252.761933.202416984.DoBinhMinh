@@ -20,7 +20,6 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
-
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
@@ -30,7 +29,6 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
-
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
@@ -41,7 +39,6 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
-
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
