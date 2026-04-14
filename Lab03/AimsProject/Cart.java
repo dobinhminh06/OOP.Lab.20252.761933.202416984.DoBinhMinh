@@ -15,8 +15,8 @@ public class Cart {
     }
 
     //Overloading: Su dung Array parameter
-    // public void addDigitalVideoDisc(DigitalVideoDisc [] dvgdist){
-    //     for(DigitalVideoDisc disc : dvgdist){
+    // public void addDigitalVideoDisc(DigitalVideoDisc [] dvds){
+    //     for(DigitalVideoDisc disc : dvds){
     //         this.addDigitalVideoDisc(disc);
     //     }
     // }
