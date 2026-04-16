@@ -17,5 +17,17 @@ public class CartTest {
         cart.addDigitalVideoDisc(dvd3);
 
         cart.print();
+
+        System.out.println("\nSearching for DVD with ID 1:");
+        cart.searchById(1);
+
+        System.out.println("\nSearching for DVD with ID 5:");
+        cart.searchById(5);
+
+        System.out.println("\nSearching for DVD with title 'Aladdin':");
+        cart.searchByTitle("Aladdin");
+
+        System.out.println("\nSearching for DVD with title 'Frozen':");
+        cart.searchByTitle("Frozen");
     }
 }
