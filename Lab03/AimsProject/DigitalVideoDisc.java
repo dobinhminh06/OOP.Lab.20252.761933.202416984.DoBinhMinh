@@ -70,4 +70,8 @@ public class DigitalVideoDisc {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public int getId() {
+        return id;
+    }
 }
