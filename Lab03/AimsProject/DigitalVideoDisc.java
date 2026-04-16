@@ -1,5 +1,7 @@
 package Lab03.AimsProject;
 
+import java.security.PrivateKey;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -73,5 +75,16 @@ public class DigitalVideoDisc {
 
     public int getId() {
         return id;
+    }
+
+    public String toString(){
+        return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$"; 
+    }
+
+    public boolean isMatch(String title){
+        if(this.title != null && title != null){
+            return this.title.toLowerCase().contains(title.toLowerCase());
+        }
+        return false;
     }
 }
