@@ -18,6 +18,7 @@ public class GarbageCreator {
             return;
         }
 
+        
         startTime = System.currentTimeMillis();
         String outputString = "";
         
