@@ -1,4 +1,6 @@
-package Lab03.AimsProject;
+package AimsProject.src.hust.soict.dsai.aims.cart;
+
+import AimsProject.src.hust.soict.dsai.aims.disc.*;
 
 public class Cart {
     private DigitalVideoDisc[] items = new DigitalVideoDisc[20]; 

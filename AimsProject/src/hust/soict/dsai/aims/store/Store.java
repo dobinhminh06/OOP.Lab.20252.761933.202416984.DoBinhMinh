@@ -1,4 +1,6 @@
-package Lab03.AimsProject;
+package AimsProject.src.hust.soict.dsai.aims.store;
+
+import AimsProject.src.hust.soict.dsai.aims.disc.*;
 
 public class Store {
     private DigitalVideoDisc itemInStore[] = new DigitalVideoDisc[100];

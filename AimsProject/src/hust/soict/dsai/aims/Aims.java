@@ -1,4 +1,7 @@
-package Lab03.AimsProject;
+package AimsProject.src.hust.soict.dsai.aims;
+
+import AimsProject.src.hust.soict.dsai.aims.disc.*;
+import AimsProject.src.hust.soict.dsai.aims.cart.*;
 
 public class Aims {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lab03.AimsProject;
+package AimsProject.src.hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
     private String title;
@@ -15,8 +15,7 @@ public class DigitalVideoDisc {
 
     // Constructor with all parameters
     public DigitalVideoDisc(String title, String category, String director, int length, double cost) {
-        this.title = title.trim(); // Chuẩn hóa tiêu đề
-        this.title = title;
+        this.title = title.trim(); // Chuẩn hóa tiêu đề (đã xóa dòng thừa bên dưới)
         this.category = category;
         this.director = director;
         this.length = length;
@@ -27,8 +26,7 @@ public class DigitalVideoDisc {
 
     // Constructor with category, title, length, and cost
     public DigitalVideoDisc(String title, String category, int length, double cost) {
-        this.title = title.trim(); // Chuẩn hóa tiêu đề
-        this.title = title;
+        this.title = title.trim(); 
         this.category = category;
         this.length = length;
         this.cost = cost;
@@ -39,18 +37,16 @@ public class DigitalVideoDisc {
     // Constructor with category, title, and cost
     public DigitalVideoDisc(String category, String title, double cost) {
         this.category = category;
-        this.title = title.trim(); // Chuẩn hóa tiêu đề
-        this.title = title;
+        this.title = title.trim(); 
         this.cost = cost;
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String title) {
-        this.title = title.trim(); // Loại bỏ khoảng trắng thừa
+        this.title = title.trim(); 
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
-        this.title = title;
     }
     
     // toString method for displaying DVD details
