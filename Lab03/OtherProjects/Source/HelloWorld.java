@@ -1,4 +1,5 @@
-package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
+package Lab03.OtherProjects.Source;
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Xin chao /n cac ban");

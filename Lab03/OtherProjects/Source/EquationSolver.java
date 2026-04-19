@@ -1,4 +1,6 @@
-package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
+package Lab03.OtherProjects.Source;
+
+
 import javax.swing.JOptionPane;
 
 public class EquationSolver {

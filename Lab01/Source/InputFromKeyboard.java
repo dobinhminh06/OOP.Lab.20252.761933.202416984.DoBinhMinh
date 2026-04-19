@@ -1,4 +1,5 @@
-package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
+package Lab01.Source;
+
 import java.util.Scanner;
 
 public class InputFromKeyboard {

@@ -1,4 +1,5 @@
-package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
+package Lab03.OtherProjects.Source;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -19,11 +20,11 @@ public class ArrayOperations {
         int sum = 0;
         for (int num : my_array1) {
             sum += num;
-        }   
+        }
         
         double average = (double) sum / my_array1.length;
 
-        System.out.println("Sum: " + sum);
+        System.out.println("Sumhekki: " + sum);
         System.out.println("Average: " + average);
     }
 }

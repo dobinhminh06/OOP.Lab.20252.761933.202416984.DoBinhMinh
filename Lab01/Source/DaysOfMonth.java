@@ -1,14 +1,4 @@
-package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
-// Nhập dữ liệu:
-// Tháng: Phải xử lý được 4 định dạng đầu vào khác nhau: Tên đầy đủ, tên viết tắt có dấu chấm, 
-// 3 chữ cái đầu, hoặc số thứ tự (Ví dụ: January, Jan., Jan, 1).
-// Năm: Phải là số nguyên không âm và 
-// nhập đầy đủ các chữ số (Ví dụ: 1999).
-// Kiểm tra hợp lệ (Validation): Dùng vòng lặp kiểm tra, 
-// nếu người dùng nhập sai định dạng của tháng hoặc năm, phải yêu cầu nhập lại cho đến khi đúng.
-// Xử lý logic: Cài đặt thuật toán kiểm tra năm nhuận 
-// (chia hết cho 4, ngoại trừ các năm chia hết cho 100 nhưng không chia hết cho 400) để xác định tháng 2 có 28 hay 29 ngày. 
-// Các tháng còn lại lấy số ngày mặc định theo bảng.
+package Lab01.Source;
 
 import java.util.Scanner;
 
