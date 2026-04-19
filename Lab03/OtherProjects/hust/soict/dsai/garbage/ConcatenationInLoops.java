@@ -1,4 +1,4 @@
-package Lab03.OtherProjects.hust.soict.globalict.garbage.ConcatenationInLoops;
+package Lab03.OtherProjects.hust.soict.dsai.garbage;
 
 import java.util.Random;
 

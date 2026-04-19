@@ -1,12 +1,11 @@
-package Lab03.OtherProjects.hust;
+package Lab03.OtherProjects.hust.soict.dsai.garbage;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class GarbageCreator {
+public class NoGarbage {
     public static void main(String[] args) {
-        // Thay thế bằng đường dẫn tới một file dung lượng khá lớn (ví dụ vài MB)
         String filename = "test.exe"; 
         byte[] inputBytes = { 0 };
         long startTime, endTime;
@@ -18,16 +17,15 @@ public class GarbageCreator {
             return;
         }
 
-        
         startTime = System.currentTimeMillis();
-        String outputString = "";
         
-        // Sử dụng toán tử + tạo ra rất nhiều rác bộ nhớ
+        // Sử dụng StringBuilder (hoặc StringBuffer) để tối ưu
+        StringBuilder outputStringBuilder = new StringBuilder(); 
         for (byte b : inputBytes) {
-            outputString += (char) b;
+            outputStringBuilder.append((char) b);
         }
         
         endTime = System.currentTimeMillis();
-        System.out.println("Thời gian chạy (String +): " + (endTime - startTime) + " ms");
+        System.out.println("Thời gian chạy (StringBuilder): " + (endTime - startTime) + " ms");
     }
 }

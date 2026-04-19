@@ -1,3 +1,4 @@
+package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
 // Nhập dữ liệu:
 // Tháng: Phải xử lý được 4 định dạng đầu vào khác nhau: Tên đầy đủ, tên viết tắt có dấu chấm, 
 // 3 chữ cái đầu, hoặc số thứ tự (Ví dụ: January, Jan., Jan, 1).

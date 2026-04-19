@@ -1,3 +1,4 @@
+package Lab03.OtherProjects.Lab01.hust.soict.dsai.lab01;
 import java.util.Arrays;
 import java.util.Scanner;
 
