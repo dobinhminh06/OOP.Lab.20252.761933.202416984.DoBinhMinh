@@ -1,6 +1,4 @@
-package Lab03.AimsProject.src.hust.soict.dsai.aims.cart;
-
-import Lab03.AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+package Lab02;
 
 public class Cart {
     public static final int MAX_NUMBER_ORDERED = 20;
@@ -17,7 +15,7 @@ public class Cart {
         if(c==MAX_NUMBER_ORDERED-1 || c==MAX_NUMBER_ORDERED) System.out.println("The cart is almost full");
         else System.out.println("The disc has been added");
     }
-    public void addDigitalVideoDisc(DigitalVideoDisc ... dArray){
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dArray){
         if(qtyOrdered + dArray.length > MAX_NUMBER_ORDERED){
             System.out.println("Da order qua nhieu");
             return;
@@ -26,15 +24,6 @@ public class Cart {
             itemsOrdered[qtyOrdered++] = dArray[i];
         }
     }
-    /*public void addDigitalVideoDisc(DigitalVideoDisc [] dArray){
-        if(qtyOrdered + dArray.length > MAX_NUMBER_ORDERED){
-            System.out.println("Da order qua nhieu");
-            return;
-        }
-        for(int i = 0; i<dArray.length; i++){
-            itemsOrdered[qtyOrdered++] = dArray[i];
-        }
-    }*/
     public void addDigitalVideoDisc(DigitalVideoDisc d1, DigitalVideoDisc d2){
         int c = qtyOrdered;
         if(c+1 >= MAX_NUMBER_ORDERED){
@@ -47,7 +36,6 @@ public class Cart {
         if(qtyOrdered==MAX_NUMBER_ORDERED - 1 || qtyOrdered==MAX_NUMBER_ORDERED) System.out.println("The cart is almost full");
         else System.out.println("The disc has been added");
     }
-
     public double totalCost(){
         double tc = 0;
         for(int i =0 ; i<qtyOrdered; i++){
@@ -81,38 +69,9 @@ public class Cart {
         qtyOrdered -= deleted;
     }
     public void printAll(){
-        System.out.println("*******************************CART******************************");
-        System.out.println("Ordered items: ");
         for(int i =0; i<qtyOrdered; i++){
-            DigitalVideoDisc d = itemsOrdered[i];
-            System.out.printf("ID: %d. DVD - %s - %s - %s - %d : %.2f\n",d.getId(), d.getTitle(), d.getCategory(), d.getDirector(), d.getLength(), d.getCost());
+            System.out.println(itemsOrdered[i].getTitle());
         }
-        System.out.printf("Total cost: %.2f\n", totalCost());
-        System.out.println("*****************************************************************");
-    }
-    public void findDVD(int id){
-        boolean found = false;
-        for(int i = 0; i<qtyOrdered; i++){
-            DigitalVideoDisc d = itemsOrdered[i];
-            if(itemsOrdered[i].getId() == id){
-                System.out.printf("%d. DVD - %s - %s - %s - %d : %.2f\n",d.getId(), d.getTitle(), d.getCategory(), d.getDirector(), d.getLength(), d.getCost());
-                found = true;
-            }
-        }
-        if(!found) System.out.println("Not found");
-        //return found;
-    }
-    public void findDVD(String title){
-        boolean found = false;
-        for(int i = 0; i<qtyOrdered; i++){
-            DigitalVideoDisc d = itemsOrdered[i];
-            if(itemsOrdered[i].getTitle().equals(title)){
-                System.out.printf("%d. DVD - %s - %s - %s - %d : %.2f\n",d.getId(), d.getTitle(), d.getCategory(), d.getDirector(), d.getLength(), d.getCost());
-                found = true;
-            }
-        }
-        if(!found) System.out.println("Not found");
-        //return found;
     }
 }
 

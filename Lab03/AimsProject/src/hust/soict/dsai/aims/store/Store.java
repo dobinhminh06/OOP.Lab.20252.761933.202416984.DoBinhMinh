@@ -1,47 +1,51 @@
 package Lab03.AimsProject.src.hust.soict.dsai.aims.store;
 
-import Lab03.AimsProject.src.hust.soict.dsai.aims.disc.*;
+import Lab03.AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Store {
-    private DigitalVideoDisc itemInStore[] = new DigitalVideoDisc[100];
-    private int qtyInStore= 0;
+    private static final int MAX_NUMBER_ITEMS = 40;
+    private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBER_ITEMS];
+    public int numberItems = 0;
+    public Store(){
 
-    public void addDVD(DigitalVideoDisc dvd){
-        if(qtyInStore < itemInStore.length){
-            itemInStore[qtyInStore] = dvd;
-            qtyInStore++;
-            System.out.println("The DVD '" + dvd.getTitle() + "' has been added to the store.");
-        } else {
-            System.out.println("The store is full. Cannot add more DVDs.");
-        }
     }
 
-    public void removeDVD(DigitalVideoDisc dvd){
-        for(int i = 0; i < qtyInStore; i++){
-            if(itemInStore[i] == dvd){
-                for(int j = i; j < qtyInStore - 1; j++){
-                    itemInStore[j] = itemInStore[j + 1];
-                }
-                itemInStore[qtyInStore - 1] = null;
-                qtyInStore--;
-                System.out.println("DVD \"" + dvd.getTitle() + "\" has been removed from the store.");
-                return;
-            }
+    public void addDVD(DigitalVideoDisc d){
+        if(numberItems == MAX_NUMBER_ITEMS){
+            System.out.println("Too many items already!");
         }
-        System.out.println("DVD \"" + dvd.getTitle() + "\" was not found in the store.");
+        itemsInStore[numberItems++] = d;
     }
 
-    public void printStore() {
-        System.out.println("***********************STORE***********************");
-        if (qtyInStore == 0) {
-            System.out.println("The store is empty.");
-        } else {
-            for (int i = 0; i < qtyInStore; i++) {
-                System.out.println((i + 1) + ". " + itemInStore[i]);
+    public void removeDVDbyTitle(String title){
+        int del = 0;
+        int songhanh[] = new int[40];
+        DigitalVideoDisc temp[] = new DigitalVideoDisc[40];
+        for(int i = 0; i<numberItems; i++){
+            songhanh[i] = 0;
+            if((itemsInStore[i].getTitle()).equals(title)){
+                songhanh[i] = -1;
+                del++;
             }
+            temp[i] = itemsInStore[i];
         }
-        System.out.println("***************************************************");
+        int count1 = 0;
+        for(int i = 0; i<numberItems; i++){
+            if(songhanh[i] == -1) continue;
+            else itemsInStore[count1++] = temp[i];
+        }
+        if(del == 0){
+            System.out.println("Khong tim thay dvd nao nhu vay");
+        }
+        numberItems -= del;
+    }
+    public void printStore(){
+        System.out.println("*******************************STIORE******************************");
+        System.out.println("Ordered items: ");
+        for(int i =0; i<numberItems; i++){
+            DigitalVideoDisc d = itemsInStore[i];
+            System.out.printf("ID: %d. DVD - %s - %s - %s - %d : %.2f\n",d.getId(), d.getTitle(), d.getCategory(), d.getDirector(), d.getLength(), d.getCost());
+        }
+        System.out.println("*******************************************************************");
     }
 }
-
-

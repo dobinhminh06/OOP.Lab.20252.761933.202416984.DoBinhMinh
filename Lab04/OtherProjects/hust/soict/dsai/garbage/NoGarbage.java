@@ -1,4 +1,4 @@
-package Lab03.OtherProjects.hust.soict.dsai.garbage;
+package hust.soict.dsai.garbage;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 public class NoGarbage {
     public static void main(String[] args) {
-        String filename = "C:\\Users\\Admin\\OneDrive\\Documents\\OOP_Lab\\Lab03\\OtherProjects\\hust\\soict\\dsai\\garbage\\test.exe";
+        String filename = "C:\\Users\\Admin\\OneDrive\\Documents\\OOP_Lab\\Lab04\\OtherProjects\\hust\\soict\\dsai\\garbage\\test.exe";
         byte[] inputBytes = { 0 };
         long startTime, endTime;
 
